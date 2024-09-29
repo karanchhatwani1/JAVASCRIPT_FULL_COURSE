@@ -1,0 +1,19 @@
+body{
+    font-family: Arial;
+}
+
+.name_todo{
+    padding: 8px;
+}
+
+.date_todo{
+    padding: 8px;
+}
+
+.add_todo{
+    padding: 8px;
+    width: 100px;
+    background-color: green;
+    color: white;
+    border: none;
+}

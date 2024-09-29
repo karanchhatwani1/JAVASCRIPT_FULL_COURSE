@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Functions</title>
+    </head>
+
+    <body>
+        <script>
+            function greet(name = "there"){
+                console.log(`Hello ${name}`);
+            }
+
+            function convertToFarenheit(celsius){
+                let Farenheit = (celsius * 9/5) + 32;
+
+                return Farenheit;
+            }
+
+            function convertToCelsius(farenheit){
+                let celsius = (farenheit - 32) * 5/9;
+
+                return celsius;
+            }
+
+            function convertLength(length, from, to){
+                if(from == "miles" && to == "km"){
+                    return length * 1.6;
+                }
+                else if(from == "km" && to == "miles"){
+                    return length * 10/16;
+                }
+                else{
+                    console.log(`Invalid unit: ${from}${to}`);
+                }
+            }
+
+            greet("karan");
+
+            let fer = convertToFarenheit(25);
+            let cel = convertToCelsius(86);
+
+            console.log(fer);
+            console.log(cel);
+
+            console.log(16, "km", "miles");
+        </script>
+    </body>
+</html>

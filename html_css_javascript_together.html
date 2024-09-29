@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>HTML CSS JAVASCRIPT</title>
+
+        <style>
+            .gaming{
+                padding: 10px;
+                color: black;
+                background-color: gray;
+                border: none;
+            }
+
+            .isGaming{
+                background-color: rgb(230, 230, 230);
+                border: none;
+                padding: 10px 15px;
+                border-radius: 5px;
+                margin-right: 10px;
+                font-size: 15px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="js-button">Test</button>
+        <button class="gaming" onclick="
+            updateButton()">Gaming</button>
+        <button class="gaming2" onclick="
+            updateButton()">Music</button>
+        <button class="gaming" onclick="
+            updateButton()">Tech</button>    
+
+        <script>            
+            const button = document.querySelector('.js-button');
+            console.log(button.classList.contains('js-button'));
+
+            function updateButton(){
+                let gamingUpdate = document.querySelector('.gaming2');
+
+                if(!gamingUpdate.classList.contains('isGaming')){
+                    gamingUpdate.classList.add('isGaming');
+                }
+                else{
+                    gamingUpdate.classList.remove('isGaming');
+                } 
+            }
+        </script>
+    </body>
+</html>

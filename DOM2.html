@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>DOM2</title>
+    </head>
+
+    <body>
+        <input placeholder="Name" class="name" onkeydown="submit(event);">
+        <button onclick="
+            submit1();"
+            >Submit</button>
+        <p class="nameT"></p>
+
+        <input placeholder="Amount" class="amount" onkeydown="
+            if (event.key === 'Enter'){
+                calculation();
+            }">
+        <button onclick="
+            calculation();"
+            >Calculate</button>
+        <p class="nameC"></p> 
+        <input placeholder="Type Something" class="typeText" onkeyup="
+            updatePara()">
+        <p class="text3"></p>      
+        <script>
+            let text;
+            function submit1(){
+                text = document.querySelector('.name');
+                document.querySelector('.nameT').innerHTML = `Your name is ${text.value}`;
+            }
+            function submit(event){
+                if(event.key === "Enter"){
+                    text = document.querySelector('.name');
+                    document.querySelector('.nameT').innerHTML = `Your name is ${text.value}`;
+                }
+            }
+
+            function calculation(){
+                text = document.querySelector('.amount');
+                let cost = Number(text.value) * 100;
+
+                if(cost < 4000){
+                    document.querySelector('.nameC').innerHTML = `$${(cost + 1000)/100}`;
+                }
+                else{
+                    document.querySelector('.nameC').innerHTML = `$${cost/100}`;
+                }
+            }
+
+            function updatePara(){
+                text = document.querySelector('.typeText');
+                document.querySelector('.text3').innerHTML = `Your name is ${text.value}`;
+            }
+        </script>
+    </body>
+</html>
